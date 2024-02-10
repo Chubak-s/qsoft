@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QSOFT</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo logo" href="/">
+                <img
+                    class="logo__image"
+                    id="logo"
+                    src="https://github.com/Chubak-s/qsoft/blob/master/logo.png?raw=true"
+                    alt="logo"
+                />
+            </div>
+            <div class="header__search search">
+                <div class="header__search-icon icon">
+                    <img
+                        class="icon__image"
+                        src="https://github.com/Chubak-s/qsoft/blob/master/icon.png?raw=true"
+                        alt="icon"
+                    />
+                </div>
+                <form class="header__search-input input">
+                    <input type="text" name="search" placeholder="Найти...">
+                </form>
+            </div>
+            <div class="header__profile">
+                <div class="header__profile-name name">Константин</div>
+                <div class="header__profile-photo photo">
+                    <img
+                        class="profile__image"
+                        src="https://github.com/Chubak-s/qsoft/blob/master/photo.png?raw=true"
+                        alt="profilePhoto"
+                    />
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="container__title tittle">
+            <h2>НАШИ ПАРТНЁРЫ</h2>
+        </div>
+        <div class="container__partners">
+            <div class="container__partners-logo"><img src="https://github.com/Chubak-s/qsoft/blob/master/img.png?raw=true" alt="logo" class="partner__logo"></div>
+            <div class="container__partners-logo"><img src="https://github.com/Chubak-s/qsoft/blob/master/img_1.png?raw=true" alt="logo" class="partner__logo"></div>
+            <div class="container__partners-logo"><img src="https://github.com/Chubak-s/qsoft/blob/master/img_2.png?raw=true" alt="logo" class="partner__logo"></div>
+            <div class="container__partners-logo"><img src="https://github.com/Chubak-s/qsoft/blob/master/img_3.png?raw=true" alt="logo" class="partner__logo"></div>
+            <div class="container__partners-logo"><img src="https://github.com/Chubak-s/qsoft/blob/master/img_4.png?raw=true" alt="logo" class="partner__logo"></div>
+            <div class="container__partners-logo"><img src="https://github.com/Chubak-s/qsoft/blob/master/img_5.png?raw=true" alt="logo" class="partner__logo"></div>
+            <div class="container__partners-logo"><img src="https://github.com/Chubak-s/qsoft/blob/master/img_6.png?raw=true" alt="logo" class="partner__logo"></div>
+        </div>
+    </div>
+    <script>
+        function changeImageSource() {
+            let screenWidth = window.innerWidth;
+            let header__inner = document.querySelector(".header__inner");
+
+            if (screenWidth >= 375 && screenWidth <= 768) {
+                header__inner.innerHTML=`
+                    <div class="header__upperPart">
+                        <div class="header__logo logo" href="/">
+                            <img
+                                class="logo__image"
+                                id="logo"
+                                src="https://github.com/Chubak-s/qsoft/blob/master/logo.png?raw=true"
+                                alt="logo"
+                            />
+                        </div>
+                        <div class="header__profile">
+                            <div class="header__profile-photo photo">
+                                <img
+                                    class="profile__image"
+                                    src="https://github.com/Chubak-s/qsoft/blob/master/photo_mobile.png?raw=true"
+                                    alt="profilePhoto"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__search search">
+                        <div class="header__search-icon icon">
+                            <img
+                                class="icon__image"
+                                src="https://github.com/Chubak-s/qsoft/blob/master/icon.png?raw=true"
+                                alt="icon"
+                            />
+                        </div>
+                        <form class="header__search-input input">
+                            <input type="text" name="search" placeholder="Найти...">
+                        </form>
+                    </div>
+                `
+            }
+        }
+
+        // Вызываем функцию при загрузке страницы и при изменении размера окна.
+        window.onload = changeImageSource;
+        window.onresize = changeImageSource;
+        window.addEventListener('resize', function() {
+            location.reload();
+        });
+    </script>
+</body>
+</html>
