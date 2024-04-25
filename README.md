@@ -1,6 +1,6 @@
 # Alertify
 <p align='center'>
-  <img src='https://github.com/Chubak-s/qsoft/assets/112934217/b6d7ce2a-c351-41f5-a333-1e80809f5149' alt='logo' height='50px'>
+  <img src='https://github.com/Chubak-s/qsoft/assets/112934217/b6d7ce2a-c351-41f5-a333-1e80809f5149' alt='logo' height='500px'>
 </p>
 
 ## Оглавление
